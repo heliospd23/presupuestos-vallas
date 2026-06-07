@@ -1,0 +1,369 @@
+{
+  "simpleTorsion": {
+
+    "rollos": {
+
+      "1": {
+        "galva": 49.90,
+        "verde": 80.15
+      },
+
+      "1.5": {
+        "galva": 75.90,
+        "verde": 120
+      },
+
+      "2": {
+        "galva": 95,
+        "verde": 131.29
+      }
+
+    },
+
+
+
+    "postesNormales": {
+
+      "1": {
+
+        "galva": {
+          "enterrar": 5,
+          "placa": 8.39
+        },
+
+        "verde": {
+          "enterrar": 7.18,
+          "placa": 10.57
+        }
+
+      },
+
+
+
+      "1.5": {
+
+        "galva": {
+          "enterrar": 5.99,
+          "placa": 9.56
+        },
+
+        "verde": {
+          "enterrar": 8.89,
+          "placa": 12.46
+        }
+
+      },
+
+
+
+      "2": {
+
+        "galva": {
+          "enterrar": 6.50,
+          "placa": 10.25
+        },
+
+        "verde": {
+          "enterrar": 10.01,
+          "placa": 13.76
+        }
+
+      }
+
+    },
+
+
+
+    "postesEsquina": {
+
+      "1": {
+
+        "galva": {
+          "enterrar": 0,
+          "placa": 0
+        },
+
+        "verde": {
+          "enterrar": 0,
+          "placa": 0
+        }
+
+      },
+
+
+
+      "1.5": {
+
+        "galva": {
+          "enterrar": 0,
+          "placa": 0
+        },
+
+        "verde": {
+          "enterrar": 0,
+          "placa": 0
+        }
+
+      },
+
+
+
+      "2": {
+
+        "galva": {
+          "enterrar": 0,
+          "placa": 0
+        },
+
+        "verde": {
+          "enterrar": 0,
+          "placa": 0
+        }
+
+      }
+
+    },
+
+
+
+    "arranques": {
+
+      "1": {
+
+        "galva": {
+          "enterrar": 0,
+          "placa": 0
+        },
+
+        "verde": {
+          "enterrar": 0,
+          "placa": 0
+        }
+
+      },
+
+
+
+      "1.5": {
+
+        "galva": {
+          "enterrar": 0,
+          "placa": 0
+        },
+
+        "verde": {
+          "enterrar": 0,
+          "placa": 0
+        }
+
+      },
+
+
+
+      "2": {
+
+        "galva": {
+          "enterrar": 0,
+          "placa": 0
+        },
+
+        "verde": {
+          "enterrar": 0,
+          "placa": 0
+        }
+
+      }
+
+    },
+
+
+
+    "refuerzos": {
+
+      "1": {
+
+        "galva": {
+          "enterrar": 50,
+          "placa": 0
+        },
+
+        "verde": {
+          "enterrar": 0,
+          "placa": 0
+        }
+
+      },
+
+
+
+      "1.5": {
+
+        "galva": {
+          "enterrar": 0,
+          "placa": 0
+        },
+
+        "verde": {
+          "enterrar": 0,
+          "placa": 0
+        }
+
+      },
+
+
+
+      "2": {
+
+        "galva": {
+          "enterrar": 0,
+          "placa": 0
+        },
+
+        "verde": {
+          "enterrar": 0,
+          "placa": 0
+        }
+
+      }
+
+    },
+
+
+
+    "alambre": {
+
+      "precioKilo": 0
+
+    }
+
+  
+},
+"hercules": {
+
+  "paneles": {
+
+    "0.60": {
+      "galva": 24,
+      "verde": 29,
+      "blanco": 31
+    },
+
+    "1": {
+      "galva": 32,
+      "verde": 37,
+      "blanco": 39
+    },
+
+    "1.20": {
+      "galva": 38,
+      "verde": 43,
+      "blanco": 45
+    },
+
+    "1.5": {
+      "galva": 48,
+      "verde": 55,
+      "blanco": 58
+    },
+
+    "2": {
+      "galva": 69,
+      "verde": 78,
+      "blanco": 82
+    }
+  },
+
+  "postes": {
+
+    "0.60": {
+
+      "galva": {
+        "enterrar": 12,
+        "placa": 18
+      },
+
+      "verde": {
+        "enterrar": 14,
+        "placa": 20
+      },
+
+      "blanco": {
+        "enterrar": 15,
+        "placa": 21
+      }
+    },
+
+    "1": {
+
+      "galva": {
+        "enterrar": 15,
+        "placa": 21
+      },
+
+      "verde": {
+        "enterrar": 17,
+        "placa": 23
+      },
+
+      "blanco": {
+        "enterrar": 18,
+        "placa": 24
+      }
+    },
+
+    "1.20": {
+
+      "galva": {
+        "enterrar": 17,
+        "placa": 23
+      },
+
+      "verde": {
+        "enterrar": 19,
+        "placa": 25
+      },
+
+      "blanco": {
+        "enterrar": 20,
+        "placa": 26
+      }
+    },
+
+    "1.5": {
+
+      "galva": {
+        "enterrar": 22,
+        "placa": 29
+      },
+
+      "verde": {
+        "enterrar": 24,
+        "placa": 31
+      },
+
+      "blanco": {
+        "enterrar": 25,
+        "placa": 32
+      }
+    },
+
+    "2": {
+
+      "galva": {
+        "enterrar": 31,
+        "placa": 39
+      },
+
+      "verde": {
+        "enterrar": 34,
+        "placa": 42
+      },
+
+      "blanco": {
+        "enterrar": 36,
+        "placa": 44
+      }
+    }
+  }
+}
+}

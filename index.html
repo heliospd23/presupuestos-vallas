@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+ 
+<head>
+    <meta charset="UTF-8">
+    <title>Calculadora de Vallados</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+ 
+<body>
+    <div class="contenedor">
+ 
+        <h1>Calculadora de Presupuestos</h1>
+ 
+        <div class="formulario">
+ 
+
+
+<div class="campo">
+
+    <label for="clienteNombre">
+        Nombre del cliente:
+    </label>
+
+    <input
+    type="text"
+    id="clienteNombre">
+
+</div>
+
+<div class="campo">
+
+    <label for="clienteTelefono">
+        Teléfono:
+    </label>
+
+    <input
+    type="number"
+    id="clienteTelefono">
+
+</div>
+
+<div class="campo">
+
+    <label for="clienteCP">
+        Código postal:
+    </label>
+
+    <input
+    type="number"
+    id="clienteCP">
+
+
+
+</div>
+
+            <!-- TIPO DE VALLA -->
+            <div class="campo">
+                <label for="tipoValla">Tipo de valla:</label>
+                <select id="tipoValla">
+                    <option value="simpleTorsion">Simple torsión</option>
+                    <option value="hercules">Hércules</option>
+                </select>
+            </div>
+ 
+            <!-- METROS -->
+            <div class="campo">
+                <label for="metros">Metros lineales:</label>
+                <input type="number" id="metros" placeholder="Ej: 120">
+            </div>
+ 
+            <!-- ALTURA -->
+            <div class="campo">
+                <label for="altura">Altura:</label>
+                <select id="altura"></select>
+            </div>
+ 
+            <!-- COLOR -->
+            <div class="campo">
+                <label for="color">Color:</label>
+                <select id="color"></select>
+            </div>
+ 
+            <!-- ANCLAJE -->
+            <div class="campo">
+                <label for="anclaje">Tipo de anclaje:</label>
+                <select id="anclaje">
+                    <option value="enterrar">Enterrar</option>
+                    <option value="placa">Bases de anclaje</option>
+                </select>
+            </div>
+ 
+            <!-- PUERTA -->
+            <div class="campo">
+                <label for="tienePuerta">¿Necesita puerta?</label>
+                <select id="tienePuerta">
+                    <option value="no">No</option>
+                    <option value="si">Sí</option>
+                </select>
+            </div>
+ 
+            <!-- ANCHO PUERTA -->
+            <div id="contenedorPuerta" class="campo">
+                <label for="anchoPuerta">Ancho de puerta:</label>
+                <input type="number" id="anchoPuerta" placeholder="Ej: 4">
+            </div>
+ 
+            <!-- ESQUINAS -->
+            <div id="contenedorEsquinas" class="campo">
+                <label for="esquinas">Número de esquinas:</label>
+                <input type="number" id="esquinas" placeholder="Ej: 4">
+            </div>
+ 
+        </div>
+ 
+        <!-- BOTON -->
+        <button onclick="calcular()">Calcular presupuesto</button>
+        <button onclick="nuevoPresupuesto()" class="boton-secundario">
+    Nuevo presupuesto
+</button>
+ 
+       
+        
+
+<button
+onclick="mostrarHistorial()"
+class="boton-historial">
+
+    Ver historial
+
+</button>
+ <!-- RESULTADO -->
+        <div id="resultado"></div>
+        <input
+type="text"
+id="busquedaHistorial"
+placeholder="Buscar cliente o presupuesto..."
+class="input-busqueda"
+oninput="mostrarHistorial()">
+        <div id="historial"></div>
+        
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+    <script src="script.js"></script>
+ 
+</body>
+</html>
