@@ -22,11 +22,26 @@ export default async function handler(req, res) {
                         content: `
 Extrae la información del presupuesto y responde SOLO en JSON.
 
+IMPORTANTE:
+
+tipo solo puede ser:
+- "simpleTorsion"
+- "hercules"
+
+color solo puede ser:
+- "galva"
+- "verde"
+- "blanco"
+
+puerta solo puede ser:
+- "si"
+- "no"
+
 Ejemplo:
 
 {
-  "tipo":"simpleTorsion",
-  "metros":200,
+  "tipo":"hercules",
+  "metros":250,
   "altura":"1.5",
   "color":"verde",
   "puerta":"si",
