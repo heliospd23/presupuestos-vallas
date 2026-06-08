@@ -636,15 +636,15 @@ if (presupuesto.metros) {
     document.getElementById("metros").value = presupuesto.metros;
 }
 if (presupuesto.nombre) {
-    document.getElementById("nombre").value = presupuesto.nombre;
+    document.getElementById("clienteNombre").value = presupuesto.nombre;
 }
 
 if (presupuesto.telefono) {
-    document.getElementById("telefono").value = presupuesto.telefono;
+    document.getElementById("clienteTelefono").value = presupuesto.telefono;
 }
 
 if (presupuesto.cp) {
-    document.getElementById("cp").value = presupuesto.cp;
+    document.getElementById("clienteCP").value = presupuesto.cp;
 }
 
 if (presupuesto.esquinas) {
