@@ -608,7 +608,8 @@ function nuevoPresupuesto() {
 }
 async function probarIA() {
 
-    const mensaje = prompt("Escribe el presupuesto");
+    const mensaje =
+document.getElementById("mensajeIA").value;
 
     const respuesta = await fetch("/api/ia", {
         method: "POST",
@@ -638,13 +639,17 @@ if (presupuesto.metros) {
 
 actualizarFormulario();
 
-if (presupuesto.altura) {
-    document.getElementById("altura").value = presupuesto.altura;
-}
+setTimeout(() => {
 
-if (presupuesto.color) {
-    document.getElementById("color").value = presupuesto.color;
-}
+    if (presupuesto.altura) {
+        document.getElementById("altura").value = presupuesto.altura;
+    }
+
+    if (presupuesto.color) {
+        document.getElementById("color").value = presupuesto.color;
+    }
+
+}, 100);
 
 if (presupuesto.puerta) {
     document.getElementById("tienePuerta").value = presupuesto.puerta;
