@@ -18,6 +18,7 @@ let color = document.getElementById("color");
 let contenedorEsquinas = document.getElementById("contenedorEsquinas");
 let tienePuerta = document.getElementById("tienePuerta");
 let contenedorPuerta = document.getElementById("contenedorPuerta");
+let presupuestoEditando = null;
 
 // ACTUALIZAR FORMULARIO
 function actualizarFormulario() {
@@ -402,10 +403,27 @@ function descargarPDF() {
 
 // GUARDAR
 async function guardarPresupuesto(datos) {
+    console.log("VALOR EDITANDO:", presupuestoEditando);
 
-    const { error } = await clienteSupabase
-        .from("presupuestos")
-        .insert([datos]);
+    let error;
+
+    if (presupuestoEditando) {
+
+        const resultado = await clienteSupabase
+            .from("presupuestos")
+            .update(datos)
+            .eq("id", presupuestoEditando);
+
+        error = resultado.error;
+
+    } else {
+
+        const resultado = await clienteSupabase
+            .from("presupuestos")
+            .insert([datos]);
+
+        error = resultado.error;
+    }
 
     if (error) {
         console.log("ERROR SUPABASE:", error);
@@ -514,6 +532,9 @@ async function eliminarPresupuesto(id) {
 
 // VER
 async function verPresupuesto(id) {
+    presupuestoEditando = id;
+
+console.log("EDITANDO ID:", presupuestoEditando);
 
     const { data: presupuesto, error } = await clienteSupabase
         .from("presupuestos")
@@ -525,6 +546,7 @@ async function verPresupuesto(id) {
         console.log(error);
         return;
     }
+    presupuestoEditando = id;
 
     document.getElementById("clienteNombre").value = presupuesto.cliente;
     document.getElementById("clienteTelefono").value = presupuesto.telefono;
@@ -560,6 +582,7 @@ async function verPresupuesto(id) {
 
 // NUEVO PRESUPUESTO
 function nuevoPresupuesto() {
+    presupuestoEditando = null;
     document.getElementById("clienteNombre").value = "";
     document.getElementById("clienteTelefono").value = "";
     document.getElementById("clienteCP").value = "";
