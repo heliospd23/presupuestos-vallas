@@ -608,7 +608,7 @@ function nuevoPresupuesto() {
 }
 async function probarIA() {
 
-const mensaje = prompt("Describe la valla");
+    const mensaje = prompt("Describe la valla");
 
     const respuesta = await fetch("/api/ia", {
         method: "POST",
@@ -620,44 +620,41 @@ const mensaje = prompt("Describe la valla");
         })
     });
 
-  const datos = await respuesta.json();
+    const datos = await respuesta.json();
 
-console.log(datos);
+    console.log(datos);
 
-const presupuesto = JSON.parse(datos.respuesta);
+    const presupuesto = JSON.parse(datos.respuesta);
 
-console.log(presupuesto);
+    console.log(presupuesto);
 
-if (presupuesto.tipo) {
-    document.getElementById("tipoValla").value = presupuesto.tipo;
-}
+    // CAMPOS BASICOS
 
-if (presupuesto.metros) {
-    document.getElementById("metros").value = presupuesto.metros;
-}
-if (presupuesto.nombre) {
-    document.getElementById("clienteNombre").value = presupuesto.nombre;
-}
+    if (presupuesto.nombre) {
+        document.getElementById("clienteNombre").value = presupuesto.nombre;
+    }
 
-if (presupuesto.telefono) {
-    document.getElementById("clienteTelefono").value = presupuesto.telefono;
-}
+    if (presupuesto.telefono) {
+        document.getElementById("clienteTelefono").value = presupuesto.telefono;
+    }
 
-if (presupuesto.cp) {
-    document.getElementById("clienteCP").value = presupuesto.cp;
-}
+    if (presupuesto.cp) {
+        document.getElementById("clienteCP").value = presupuesto.cp;
+    }
 
-if (presupuesto.esquinas) {
-    document.getElementById("esquinas").value = presupuesto.esquinas;
-}
+    if (presupuesto.tipo) {
+        document.getElementById("tipoValla").value = presupuesto.tipo;
+    }
 
-if (presupuesto.anclaje) {
-    document.getElementById("anclaje").value = presupuesto.anclaje;
-}
+    if (presupuesto.metros) {
+        document.getElementById("metros").value = presupuesto.metros;
+    }
 
-actualizarFormulario();
+    // RECARGA SELECTS
 
-setTimeout(() => {
+    actualizarFormulario();
+
+    // AHORA SI PONEMOS ALTURA COLOR Y ANCLAJE
 
     if (presupuesto.altura) {
         document.getElementById("altura").value = presupuesto.altura;
@@ -667,22 +664,29 @@ setTimeout(() => {
         document.getElementById("color").value = presupuesto.color;
     }
 
-}, 100);
+    if (presupuesto.anclaje) {
+        document.getElementById("anclaje").value = presupuesto.anclaje;
+    }
 
-if (presupuesto.puerta) {
-    document.getElementById("tienePuerta").value = presupuesto.puerta;
-}
+    if (presupuesto.puerta) {
+        document.getElementById("tienePuerta").value = presupuesto.puerta;
+    }
 
-actualizarPuerta();
+    actualizarPuerta();
 
-if (presupuesto.anchoPuerta) {
-    document.getElementById("anchoPuerta").value = presupuesto.anchoPuerta;
-}
-document.getElementById("historial").innerHTML = "";
+    if (presupuesto.anchoPuerta) {
+        document.getElementById("anchoPuerta").value = presupuesto.anchoPuerta;
+    }
 
-calcular();
+    if (presupuesto.esquinas) {
+        document.getElementById("esquinas").value = presupuesto.esquinas;
+    }
 
-document.getElementById("resultado").scrollIntoView({
-    behavior: "smooth"
-});
+    document.getElementById("historial").innerHTML = "";
+
+    calcular();
+
+    document.getElementById("resultado").scrollIntoView({
+        behavior: "smooth"
+    });
 }
