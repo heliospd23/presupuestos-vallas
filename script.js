@@ -608,8 +608,7 @@ function nuevoPresupuesto() {
 }
 async function probarIA() {
 
-    const mensaje =
-document.getElementById("mensajeIA").value;
+const mensaje = prompt("Describe la valla");
 
     const respuesta = await fetch("/api/ia", {
         method: "POST",
