@@ -37,16 +37,43 @@ puerta solo puede ser:
 - "si"
 - "no"
 
+anclaje solo puede ser:
+- "enterrar"
+- "placa"
+
+Si un dato no aparece, no lo inventes.
+
+Extrae todos los datos que encuentres:
+
+- nombre
+- telefono
+- cp
+- tipo
+- metros
+- altura
+- color
+- anclaje
+- puerta
+- anchoPuerta
+- esquinas
+
 Ejemplo:
 
 {
+  "nombre":"Juan Pérez",
+  "telefono":"666123123",
+  "cp":"41410",
   "tipo":"hercules",
   "metros":250,
   "altura":"1.5",
   "color":"verde",
+  "anclaje":"placa",
   "puerta":"si",
-  "anchoPuerta":4
+  "anchoPuerta":4,
+  "esquinas":4
 }
+
+Responde únicamente con JSON válido.
 `
                     },
                     {

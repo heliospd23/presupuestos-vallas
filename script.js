@@ -635,6 +635,25 @@ if (presupuesto.tipo) {
 if (presupuesto.metros) {
     document.getElementById("metros").value = presupuesto.metros;
 }
+if (presupuesto.nombre) {
+    document.getElementById("nombre").value = presupuesto.nombre;
+}
+
+if (presupuesto.telefono) {
+    document.getElementById("telefono").value = presupuesto.telefono;
+}
+
+if (presupuesto.cp) {
+    document.getElementById("cp").value = presupuesto.cp;
+}
+
+if (presupuesto.esquinas) {
+    document.getElementById("esquinas").value = presupuesto.esquinas;
+}
+
+if (presupuesto.anclaje) {
+    document.getElementById("anclaje").value = presupuesto.anclaje;
+}
 
 actualizarFormulario();
 
@@ -662,6 +681,7 @@ if (presupuesto.anchoPuerta) {
 document.getElementById("historial").innerHTML = "";
 
 calcular();
+
 document.getElementById("resultado").scrollIntoView({
     behavior: "smooth"
 });
