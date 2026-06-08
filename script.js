@@ -620,9 +620,39 @@ async function probarIA() {
         })
     });
 
-    const datos = await respuesta.json();
+  const datos = await respuesta.json();
 
-    console.log(datos);
+console.log(datos);
 
-    alert(datos.respuesta);
+const presupuesto = JSON.parse(datos.respuesta);
+
+console.log(presupuesto);
+
+if (presupuesto.tipo) {
+    document.getElementById("tipoValla").value = presupuesto.tipo;
+}
+
+if (presupuesto.metros) {
+    document.getElementById("metros").value = presupuesto.metros;
+}
+
+actualizarFormulario();
+
+if (presupuesto.altura) {
+    document.getElementById("altura").value = presupuesto.altura;
+}
+
+if (presupuesto.color) {
+    document.getElementById("color").value = presupuesto.color;
+}
+
+if (presupuesto.puerta) {
+    document.getElementById("tienePuerta").value = presupuesto.puerta;
+}
+
+actualizarPuerta();
+
+if (presupuesto.anchoPuerta) {
+    document.getElementById("anchoPuerta").value = presupuesto.anchoPuerta;
+}
 }
