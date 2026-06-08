@@ -512,23 +512,23 @@ let historialMostrar = [...historial].reverse();
     </table>`;
 }
 
-// ELIMINAR
-async function eliminarPresupuesto(id) {
+    // ELIMINAR
+    async function eliminarPresupuesto(id) {
 
-    if (!confirm("¿Seguro que quieres eliminar este presupuesto?")) return;
+        if (!confirm("¿Seguro que quieres eliminar este presupuesto?")) return;
 
-    const { error } = await clienteSupabase
-        .from("presupuestos")
-        .delete()
-        .eq("id", id);
+        const { error } = await clienteSupabase
+            .from("presupuestos")
+            .delete()
+            .eq("id", id);
 
-    if (error) {
-        console.log(error);
-        return;
+        if (error) {
+            console.log(error);
+            return;
+        }
+
+        mostrarHistorial();
     }
-
-    mostrarHistorial();
-}
 
 // VER
 async function verPresupuesto(id) {
@@ -605,4 +605,24 @@ function nuevoPresupuesto() {
     setTimeout(() => {
         window.scrollTo({ top: 0, behavior: "smooth" });
     }, 0);
+}
+async function probarIA() {
+
+    const mensaje = prompt("Escribe el presupuesto");
+
+    const respuesta = await fetch("/api/ia", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            mensaje: mensaje
+        })
+    });
+
+    const datos = await respuesta.json();
+
+    console.log(datos);
+
+    alert(datos.respuesta);
 }
