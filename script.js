@@ -659,4 +659,8 @@ actualizarPuerta();
 if (presupuesto.anchoPuerta) {
     document.getElementById("anchoPuerta").value = presupuesto.anchoPuerta;
 }
+calcular();
+document.getElementById("resultado").scrollIntoView({
+    behavior: "smooth"
+});
 }
