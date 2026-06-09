@@ -96,7 +96,7 @@ async function calcular() {
     let clienteTelefono = document.getElementById("clienteTelefono").value;
     let clienteCP = document.getElementById("clienteCP").value;
     let clienteEmail = document.getElementById("clienteEmail").value;
-let clienteLocalidad = document.getElementById("clienteLocalidad").value;
+    let clienteLocalidad = document.getElementById("clienteLocalidad").value;
     let resultado = document.getElementById("resultado");
     let numeroPresupuesto = "PRES-" + new Date().getFullYear() + "-" + Math.floor(Math.random() * 1000);
 
@@ -285,6 +285,8 @@ let clienteLocalidad = document.getElementById("clienteLocalidad").value;
                 color: colorSeleccionado,
                 anclaje: anclaje,
                 puerta: puerta,
+                email: clienteEmail,
+                localidad: clienteLocalidad,
                 anchoPuerta: anchoPuerta,
                 esquinas: esquinas,
                 total: totalConIva.toFixed(2)
@@ -388,6 +390,8 @@ let clienteLocalidad = document.getElementById("clienteLocalidad").value;
                 color: colorSeleccionado,
                 anclaje: anclaje,
                 puerta: puerta,
+                email: clienteEmail,
+                localidad: clienteLocalidad,
                 anchoPuerta: anchoPuerta,
                 total: totalConIva.toFixed(2)
             });
@@ -555,6 +559,8 @@ console.log("EDITANDO ID:", presupuestoEditando);
     document.getElementById("clienteCP").value = presupuesto.cp;
     document.getElementById("tipoValla").value = presupuesto.tipo;
     document.getElementById("metros").value = presupuesto.metros;
+    document.getElementById("clienteEmail").value = presupuesto.email || "";
+    document.getElementById("clienteLocalidad").value = presupuesto.localidad || "";
 
     actualizarFormulario();
 
