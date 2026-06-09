@@ -205,6 +205,46 @@ Extrae cuando existan:
 metros
 esquinas
 
+extrae tambien :
+- email
+- localidad
+ejemplo
+{
+  "nombre":"Juan Pérez",
+  "telefono":"666123123",
+  "email":"juan@gmail.com",
+  "cp":"41410",
+  "localidad":"Carmona"
+}
+
+REGLAS IMPORTANTES:
+
+- cp debe ser un código postal numérico.
+- localidad debe ser el nombre de la ciudad o pueblo.
+- Nunca guardes una ciudad dentro de cp.
+- Nunca guardes un código postal dentro de localidad.
+
+Ejemplos:
+
+"Sevilla" -> localidad
+
+"41001" -> cp
+
+"Carmona" -> localidad
+
+"41410" -> cp
+ejemplo 
+{
+  "nombre":"Juan Pérez",
+  "telefono":"666123123",
+  "email":"juan@gmail.com",
+  "localidad":"Sevilla",
+  "cp":"41001",
+  "tipo":"hercules",
+  "metros":200
+}
+
+
 IMPORTANTE
 
 No inventes valores.
