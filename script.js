@@ -597,7 +597,8 @@ function nuevoPresupuesto() {
     document.getElementById("metros").value = "";
     document.getElementById("esquinas").value = "";
     document.getElementById("anchoPuerta").value = "";
-
+    document.getElementById("clienteEmail").value = "";
+    document.getElementById("clienteLocalidad").value = "";
     document.getElementById("tipoValla").value = "simpleTorsion";
     document.getElementById("anclaje").value = "enterrar";
     document.getElementById("tienePuerta").value = "no";
@@ -657,7 +658,10 @@ async function probarIA() {
     if (presupuesto.metros) {
         document.getElementById("metros").value = presupuesto.metros;
     }
-    if (presupuesto.email) {
+console.log("EMAIL ELEMENTO:", document.getElementById("clienteEmail"));
+console.log("LOCALIDAD ELEMENTO:", document.getElementById("clienteLocalidad"));
+
+if (presupuesto.email) {
     document.getElementById("clienteEmail").value = presupuesto.email;
 }
 
