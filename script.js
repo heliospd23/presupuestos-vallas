@@ -95,6 +95,8 @@ async function calcular() {
     let clienteNombre = document.getElementById("clienteNombre").value;
     let clienteTelefono = document.getElementById("clienteTelefono").value;
     let clienteCP = document.getElementById("clienteCP").value;
+    let clienteEmail = document.getElementById("clienteEmail").value;
+let clienteLocalidad = document.getElementById("clienteLocalidad").value;
     let resultado = document.getElementById("resultado");
     let numeroPresupuesto = "PRES-" + new Date().getFullYear() + "-" + Math.floor(Math.random() * 1000);
 
