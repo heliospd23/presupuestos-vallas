@@ -649,6 +649,13 @@ async function probarIA() {
     if (presupuesto.metros) {
         document.getElementById("metros").value = presupuesto.metros;
     }
+    if (presupuesto.email) {
+    document.getElementById("clienteEmail").value = presupuesto.email;
+}
+
+if (presupuesto.localidad) {
+    document.getElementById("clienteLocalidad").value = presupuesto.localidad;
+}
 
     // RECARGA SELECTS
 
